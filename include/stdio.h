@@ -13,4 +13,6 @@ int putchar(int ch);
 int puts(char* s);
 int puti(int n);
 
+int getchar();
+
 #endif /* _STDIO_H_ */

@@ -1,7 +1,12 @@
-.section .text
-    .global write, putchar
 
-# size_t write(int stream, const void* buf, size_t count)
+.section .data
+__getchar_buf:
+    .space 8
+
+.section .text
+    .global write, putchar, getchar
+
+# size_t write(int _fd, const void* buf, size_t size)
 write:
     pushq %rbp
     movq  %rsp,  %rbp
@@ -11,6 +16,19 @@ write:
     movl $4,    %eax
     int  $0x80
     popq %rbp
+    ret
+
+# int* getchar()
+getchar:
+    pushq %rbp
+    movq  %rsp,  %rbp
+    movl  $1,  %edx
+    movq  $__getchar_buf,  %rcx
+    movl  $0,  %ebx
+    movl  $3,  %eax
+    int   $0x80
+    movl  0(%rcx), %eax
+    popq  %rbp
     ret
 
 # int putchar(int ch)
