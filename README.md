@@ -3,11 +3,11 @@ A Tiny CRT (C Runtime) Library
 
 This library is built as a module of another project [zjucc](https://https://github.com/bugsz/c-compiler)
 
-# Author
+## Author
 
 Zhiyuan Pan, Zhejiang University
 
-# Usage
+## Usage
 
 From the project root folder, run
 
@@ -22,8 +22,8 @@ ld ${FILE_NAME}.o -L. -lc -o ${EXE_NAME}
 ./${EXE_NAME}
 ```
 
-# Current supported platforms
+## Current supported platforms
 * x86_64-linux-gnu
 
-# Current supported functions
+## Current supported functions
 * int write(int _fd, const void* buf, size_t size);
