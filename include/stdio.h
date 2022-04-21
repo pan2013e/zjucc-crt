@@ -7,8 +7,10 @@
 
 typedef long size_t;
 
-int write(int _fd, const void* buf, size_t size);
+size_t write(int _fd, const void* buf, size_t size);
 
 int putchar(int ch);
+int puts(char* s);
+int puti(int n);
 
 #endif /* _STDIO_H_ */
