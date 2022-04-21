@@ -1,7 +1,7 @@
 A Tiny CRT (C Runtime) Library
 ---
 
-This library is built as a module of another project [zjucc](https://https://github.com/bugsz/c-compiler)
+This library is built as a module of a compiler project [zjucc](https://https://github.com/bugsz/c-compiler)
 
 ## Author
 
@@ -20,10 +20,18 @@ make -e arch=${ARCH_NAME}
 gcc -nostdlib -c ${FILE_NAME}.c
 ld ${FILE_NAME}.o -L. -lc -o ${EXE_NAME}
 ./${EXE_NAME}
+
+# Try test cases
+make clean && make test
 ```
 
 ## Current supported platforms
-* x86_64-linux-gnu
+* `x86_64-linux-gnu`
 
 ## Current supported functions
-* int write(int _fd, const void* buf, size_t size);
+```c
+size_t write(int _fd, const void* buf, size_t size);
+int putchar(int ch);
+int puts(char* s);
+int puti(int n);
+```
