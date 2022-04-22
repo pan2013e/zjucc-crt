@@ -26,3 +26,13 @@ int puti(int n) {
     putchar('\n');
     return 0;
 }
+
+int gets(char* buf) {
+    char* p = buf;
+    char ch;
+    while ((ch = getchar()) != '\n') {
+        *buf++ = ch;
+    }
+    *buf = '\0';
+    return 0;
+}
