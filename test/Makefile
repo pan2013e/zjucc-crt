@@ -10,7 +10,7 @@ all: ${EXE}
 	@${LD} $< -o $@ -L${LDIR} -lc
 
 %.o:%.c
-	@${CC} -nostdlib -c $< -I${INC} -fno-builtin
+	@${CC} -c $< -I${INC} -fno-builtin -nostartfiles -nostdlib -nostdinc
 	@echo CC $<
 
 clean:
