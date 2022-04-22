@@ -18,7 +18,7 @@ write:
     popq %rbp
     ret
 
-# int* getchar()
+# int getchar()
 getchar:
     pushq %rbp
     movq  %rsp,  %rbp
