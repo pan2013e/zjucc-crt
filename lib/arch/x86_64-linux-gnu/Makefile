@@ -7,7 +7,7 @@ INC = ../../../include
 all: ${OBJ}
 
 %.o: %.c
-	@$(CC) -nostdlib -c $< -o $@ -I${INC}
+	@$(CC) -c $< -o $@ -I${INC} -fno-builtin -nostartfiles -nostdlib -nostdinc
 	@echo CC $<
 
 %.o: %.S
