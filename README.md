@@ -4,7 +4,7 @@ A Tiny CRT (C Runtime) Library
 ## Introduction
 * The library is a simplified implementation of a subset of `libc`, and it's for educational purposes
 only.
-* The library is a submodule of my C compiler project [zjucc](https://https://github.com/pan2013e/c-compiler). 
+* The library is a submodule of my C compiler project [zjucc](https://github.com/pan2013e/c-compiler). 
 
 ## Author
 
