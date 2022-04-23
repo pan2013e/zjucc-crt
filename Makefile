@@ -23,4 +23,5 @@ test: all ${TEST_SRC_DIR}
 clean: 
 	rm -f ${LIBC_DIR}
 	@${MAKE} -C ${ARCH_DIR} clean
+	@${MAKE} -C lib clean
 	@${MAKE} -C test clean
