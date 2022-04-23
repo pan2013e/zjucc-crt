@@ -7,6 +7,7 @@ _init:
     ret
 
 .section .text
+    .extern __malloc_init
     .global _start, _exit
 
 _start :
@@ -18,6 +19,7 @@ _start :
     pushq   %rsi  # argv
     pushq   %rdi  # argc
     call _init
+    call __malloc_init
     popq    %rdi
     popq    %rsi
     popq    %rcx
