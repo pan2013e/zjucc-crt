@@ -5,13 +5,13 @@ int puts(char* s) {
     while (*p != '\0') {
         putchar(*p++);
     }
-    putchar('\n');
     return 0;
 }
 
-int puti(int n) {
+int puti(long n) {
     char s[25] = { 0 };
-    int pos = 0, num = n;
+    int pos = 0;
+    long num = n;
     if (n < 0) {
         putchar('-');
         num = -num;
@@ -23,7 +23,23 @@ int puti(int n) {
     for (int i = pos;i >= 0;i--) {
         putchar(s[i]);
     }
-    putchar('\n');
+    return 0;
+}
+
+int putf(double x) {
+    int precision = 6, bias = 1e6, mod = 1e7;
+    if (x < 0) {
+        putchar('-');
+        x = -x;
+    }
+    long temp = (long)(x * bias);
+    if (temp != 0) {
+        puti(x);
+        putchar('.');
+        puti(temp % mod);
+    } else {
+        puti(0);
+    }
     return 0;
 }
 
