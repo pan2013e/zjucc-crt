@@ -3,10 +3,11 @@ OBJ = $(patsubst %.c,%.o, $(wildcard *.c))
 SRC = $(wildcard *.c)
 INC = ../include
 LDIR = ..
+LIB = ../libc.a
 
 all: ${EXE}
 
-%.out:%.o
+%.out:%.o ${LIB}
 	@${LD} $< -o $@ -L${LDIR} -lc
 
 %.o:%.c
