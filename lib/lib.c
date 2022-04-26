@@ -1,3 +1,5 @@
+#define HAS_POINTER
+
 #include "stdio.h"
 
 extern void _exit(int);
@@ -7,12 +9,6 @@ void exit(int __status) {
 }
 
 int __assert(char* msg, char* file, int line) {
-    puts("Assertion failed: ");
-    puts(msg);
-    puts(" at ");
-    puts(file);
-    puts(", line ");
-    puti(line);
-    putsln("");
+    printf("Assertion failed: %s at %s, line %d\n", msg, file, line);
     exit(-1);
 }
