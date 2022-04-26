@@ -1,4 +1,5 @@
-#include "stdio.h"
+int putchar(int);
+int getchar();
 
 int puts(char* s) {
     char* p = s;
@@ -8,7 +9,7 @@ int puts(char* s) {
     return 0;
 }
 
-int puti(long n) {
+int puti(int n) {
     char s[25] = { 0 };
     int pos = 0;
     long num = n;
@@ -50,5 +51,57 @@ int gets(char* buf) {
         *buf++ = ch;
     }
     *buf = '\0';
+    return 0;
+}
+
+int printf(char* fmt, ...) {
+    __builtin_va_list ap;
+    __builtin_va_start(ap, fmt);
+    char ch;
+    while (ch = *fmt++) {
+        if (ch != '%') {
+            putchar(ch);
+            continue;
+        } else {
+            switch (*fmt) {
+                case 'c': {
+                    int _ch = __builtin_va_arg(ap, int);
+                    putchar(_ch);
+                    fmt++;
+                    break;
+                }
+                case 's': {
+                    char* s = __builtin_va_arg(ap, char*);
+                    puts(s);
+                    fmt++;
+                    break;
+                }
+                case 'd': {
+                    int d = __builtin_va_arg(ap, int);
+                    puti(d);
+                    fmt++;
+                    break;
+                }
+                // case 'f': {
+                //     double f = __builtin_va_arg(ap, double);
+                //     putf(f);
+                //     fmt++;
+                //     break;
+                // }
+                case '%': {
+                    putchar('%');
+                    fmt++;
+                    break;
+                }
+                default: {
+                    puts("\nUnknown format '%");
+                    putchar(*fmt);
+                    puts("'\n");
+                    return -1;
+                }
+            }
+        }
+    }
+    __builtin_va_end(ap);
     return 0;
 }
