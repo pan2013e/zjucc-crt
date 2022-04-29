@@ -34,7 +34,7 @@ int waitpid(int __pid, int* __wstatus, int __options) {
     return syscall_32(__NR_waitpid, __pid, __wstatus, __options);
     #endif
     #if __RISCV_64__
-    return syscall()
+    return 0; // unimplemented for riscv64 platform
     #endif
 }
 
