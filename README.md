@@ -17,12 +17,13 @@ Zhiyuan Pan, Zhejiang University
 From the project root folder, run
 
 ```bash
-make  # default: x86_64-linux-gnu
-# or
-make -e arch=${ARCH_NAME}
+make  # default arch: x86_64-linux-gnu
+# or specify architecture by '-e' option
+make -e arch=${ARCH_NAME} # for available archs, see next section
 
 # Use gcc or other C compilers
-gcc -nostdlib -c ${FILE_NAME}.c
+# The compiler's C library is now unnecessary
+gcc -c ${FILE_NAME}.c -fno-builtin -nostdinc -nostdlib -nostartfiles
 ld ${FILE_NAME}.o -L. -lc -o ${EXE_NAME}
 ./${EXE_NAME}
 
@@ -32,12 +33,10 @@ make clean && make test
 
 ## Current supported platforms
 * `x86_64-linux-gnu`
+* `riscv-linux-gnu` (still has bugs to deal with)
 
 ## Current supported functions
 ```c
-/* C program entry */
-void _start(); 
-
 /* unistd.h */
 size_t write(int _fd, const void* buf, size_t size);
 
