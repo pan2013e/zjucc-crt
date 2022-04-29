@@ -4,19 +4,20 @@ __getchar_buf:
     .space 8
 
 .section .text
-    .global write, putchar, getchar
+#    .global write
+    .global putchar, getchar
 
 # size_t write(int _fd, const void* buf, size_t size)
-write:
-    pushq %rbp
-    movq  %rsp,  %rbp
-    movl %edx,  %edx
-    movq %rsi,  %rcx
-    movl %edi,  %ebx
-    movl $4,    %eax
-    int  $0x80
-    popq %rbp
-    ret
+#write:
+#    pushq %rbp
+#    movq  %rsp,  %rbp
+#    movl %edx,  %edx
+#    movq %rsi,  %rcx
+#    movl %edi,  %ebx
+#    movl $4,    %eax
+#    int  $0x80
+#    popq %rbp
+#    ret
 
 # int getchar()
 getchar:
