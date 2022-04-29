@@ -1,7 +1,7 @@
 #ifndef _ASM_UNISTD_32_H
 #define _ASM_UNISTD_32_H
 
-#ifdef __X86_64__
+#if __X86_64__
 #define __NR_restart_syscall 0
 #define __NR_exit 1
 #define __NR_fork 2
