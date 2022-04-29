@@ -13,7 +13,7 @@ TEST_SRC_DIR = $(wildcard ./test/*.c)
 
 all: ${SRC_DIR}
 	@${MAKE} -C ${ARCH_DIR} all
-	@${MAKE} -C lib all
+	@${MAKE} -C lib -e arch=${arch} all
 	@${AR} cr ${LIBC_DIR} ${OBJ_DIR}
 	@echo AR ${LIBC_DIR}
 
