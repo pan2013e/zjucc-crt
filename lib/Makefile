@@ -13,7 +13,7 @@ endif
 all: ${OBJ}
 
 %.o:%.c
-	@$(CC) -c $< -o $@ -I${INC} -fno-builtin -nostartfiles -nostdlib -nostdinc -D${DEF}
+	@$(CC) -c $< -o $@ -I${INC} -fno-builtin -nostartfiles -nostdlib -nostdinc -D${DEF} -mincoming-stack-boundary=3
 	@echo CC $<
 
 clean:
