@@ -62,7 +62,14 @@ int printf(char* fmt, ...) {
         if (ch != '%') {
             putchar(ch);
             continue;
-        } else {
+        } else { // ch == '%'
+            if (*fmt == '*') {
+                int n_spaces = __builtin_va_arg(ap, int);
+                for (int i = 0;i < n_spaces;i++) {
+                    putchar(' ');
+                }
+                fmt++;
+            }
             switch (*fmt) {
                 case 'c': {
                     int _ch = __builtin_va_arg(ap, int);
