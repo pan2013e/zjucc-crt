@@ -28,7 +28,7 @@ int puti(int n) {
 }
 
 int putf(double x) {
-    int precision = 6, bias = 1e6, mod = 1e7;
+    int precision = 6, bias = 1e6;
     if (x < 0) {
         putchar('-');
         x = -x;
@@ -37,7 +37,7 @@ int putf(double x) {
     if (temp != 0) {
         puti(x);
         putchar('.');
-        puti(temp % mod);
+        puti(temp % bias);
     } else {
         puti(0);
     }
@@ -82,12 +82,12 @@ int printf(char* fmt, ...) {
                     fmt++;
                     break;
                 }
-                // case 'f': {
-                //     double f = __builtin_va_arg(ap, double);
-                //     putf(f);
-                //     fmt++;
-                //     break;
-                // }
+                case 'f': {
+                    double f = __builtin_va_arg(ap, double);
+                    putf(f);
+                    fmt++;
+                    break;
+                }
                 case '%': {
                     putchar('%');
                     fmt++;
