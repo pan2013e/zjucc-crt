@@ -1,3 +1,6 @@
+#include "string.h"
+#include "errno.h"
+
 int putchar(int);
 int getchar();
 
@@ -111,4 +114,8 @@ int printf(char* fmt, ...) {
     }
     __builtin_va_end(ap);
     return 0;
+}
+
+void perror(char* s) {
+    printf("%s: %s\n", s, strerror(errno));
 }

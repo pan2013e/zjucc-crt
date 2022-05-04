@@ -1,5 +1,3 @@
-#define HAS_POINTER
-
 #include "stdio.h"
 
 extern void _exit(int);

@@ -1,3 +1,5 @@
+#include "errno.h"
+
 long syscall(int sys_num, ...) {
     __builtin_va_list ap;
     __builtin_va_start(ap, sys_num);
@@ -9,6 +11,10 @@ long syscall(int sys_num, ...) {
     __builtin_va_end(ap);
     asm volatile("syscall" : "+r"(a0) : "r"(a1), "r"(a2), "r"(a3), "r"(a4)
         : "memory", "rcx", "r8", "r9", "r11");
+    if(a0 < 0) {
+        errno = -a0;
+        return -1;
+    }
     return a0;
 }
 
@@ -25,5 +31,9 @@ int syscall_32(int sys_num, ...) {
     asm volatile("int $0x80"
         : "+r"(a0) : "r"(a1), "r"(a2), "r"(a3), "r"(a4), "r"(a5)
         : "memory");
+    if(a0 < 0) {
+        errno = -a0;
+        return -1;
+    }
     return a0;
 }
