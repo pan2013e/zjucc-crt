@@ -9,7 +9,7 @@ SRC_DIR = $(wildcard ${ARCH_DIR}/*.S) $(wildcard ${ARCH_DIR}/*.c)
 OBJ_DIR = $(patsubst %.c,%.o,$(wildcard ./lib/*.c)) $(patsubst %.S,%.o,$(wildcard ${ARCH_DIR}/*.S)) $(patsubst %.c,%.o,$(wildcard ${ARCH_DIR}/*.c))
 TEST_SRC_DIR = $(wildcard ./test/*.c)
 
-.PHONY: clean test
+.PHONY: clean test install
 
 all: ${SRC_DIR}
 	@${MAKE} -C ${ARCH_DIR} all
@@ -19,6 +19,9 @@ all: ${SRC_DIR}
 
 test: all ${TEST_SRC_DIR}
 	@${MAKE} -C test all
+
+install: all
+	cp ${LIBC_DIR} /usr/local/lib
 
 clean: 
 	rm -f ${LIBC_DIR}
