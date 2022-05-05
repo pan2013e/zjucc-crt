@@ -2,7 +2,7 @@
 #include "stdio.h"
 
 #define MMAP_THRESHOLD 128*1024
-#define MAX_HEAP_SIZE  64*1024*1024
+#define MAX_HEAP_SIZE  128*1024*1024
 #define NULL (void*)0
 
 static int __malloc_initialized = 0;

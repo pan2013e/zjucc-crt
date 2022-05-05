@@ -1,8 +1,19 @@
 #include "string.h"
 #include "errno.h"
+#include "stdio.h"
+#include "unistd.h"
+#include "fcntl.h"
+#include "stdlib.h"
 
-int putchar(int);
-int getchar();
+#define NULL (void*)0
+
+typedef struct FILE_IMPL* FILE_PTR;
+struct FILE_IMPL {
+    int fd;
+    int oflags;
+    int offset;
+    char buffer[1024];
+};
 
 int puts(char* s) {
     char* p = s;
@@ -118,4 +129,114 @@ int printf(char* fmt, ...) {
 
 void perror(char* s) {
     printf("%s: %s\n", s, strerror(errno));
+}
+
+FILE* fopen(char* path, char* mode) {
+    FILE_PTR ret = (FILE_PTR)malloc(sizeof(struct FILE_IMPL));
+    if (ret == NULL) {
+        perror("malloc");
+        return NULL;
+    }
+    int oflags = 0;
+    switch (strlen(mode)) {
+        case 1: {
+            switch (*mode) {
+                case 'r': {
+                    oflags = O_RDONLY;
+                    break;
+                }
+                case 'w': {
+                    oflags = O_WRONLY | O_CREAT | O_TRUNC;
+                    break;
+                }
+                case 'a': {
+                    oflags = O_WRONLY | O_CREAT | O_APPEND;
+                    break;
+                }
+                default: {
+                    puts("Unknown mode");
+                    return NULL;
+                }
+            }
+            break;
+        }
+        case 2: {
+            switch (mode[0]) {
+                case 'r': {
+                    switch (mode[1]) {
+                        case '+': {
+                            oflags = O_RDWR;
+                            break;
+                        }
+                        default: {
+                            puts("Unknown mode");
+                            return NULL;
+                        }
+                    }
+                    break;
+                }
+                case 'w': {
+                    switch (mode[1]) {
+                        case '+': {
+                            oflags = O_RDWR | O_CREAT | O_TRUNC;
+                            break;
+                        }
+                        default: {
+                            puts("Unknown mode");
+                            return NULL;
+                        }
+                    }
+                    break;
+                }
+                case 'a': {
+                    switch (mode[1]) {
+                        case '+': {
+                            oflags = O_RDWR | O_CREAT | O_APPEND;
+                            break;
+                        }
+                        default: {
+                            puts("Unknown mode");
+                            return NULL;
+                        }
+                    }
+                    break;
+                }
+                default: {
+                    puts("Unknown mode");
+                    return NULL;
+                }
+            }
+            break;
+        }
+        default: {
+            puts("Unknown mode");
+            return NULL;
+        }
+    }
+    ret->fd = open(path, oflags, 0666);
+    if (ret->fd == -1) {
+        perror("open");
+        return NULL;
+    }
+    return (FILE*)ret;
+}
+
+int fputs(FILE* fp, char* s) {
+    FILE_PTR f = (FILE_PTR)fp;
+    return write(f->fd, s, strlen(s));
+}
+
+int fputc(FILE* fp, int ch) {
+    FILE_PTR f = (FILE_PTR)fp;
+    return write(f->fd, &ch, 1);
+}
+
+int fgets(FILE* fp, char* buf, int n) {
+    FILE_PTR f = (FILE_PTR)fp;
+    return read(f->fd, buf, n);
+}
+
+int fclose(FILE* fp) {
+    FILE_PTR f = (FILE_PTR)fp;
+    return close(f->fd);
 }
