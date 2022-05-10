@@ -22,6 +22,26 @@ int strlen(char* __s) {
     return i;
 }
 
+char* strchr(char* __s, int c) {
+    int i = 0;
+    while (__s[i] != '\0') {
+        if (__s[i] == c)
+            return __s + i;
+        ++i;
+    }
+    return NULL;
+}
+
+int strcmp(char* __s1, char* __s2) {
+    int i = 0;
+    while (__s1[i] != '\0' && __s2[i] != '\0') {
+        if (__s1[i] != __s2[i])
+            return __s1[i] - __s2[i];
+        ++i;
+    }
+    return __s1[i] - __s2[i];
+}
+
 char* strerror_impl(int errnum) {
     switch (errnum) {
         case EPERM: return "Operation not permitted";

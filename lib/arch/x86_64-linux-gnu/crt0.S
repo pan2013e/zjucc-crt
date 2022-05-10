@@ -7,7 +7,7 @@ _init:
     ret
 
 .section .text
-    .extern __malloc_init
+    .extern __malloc_init, exit
     .global _start, _exit
 
 _start :
@@ -31,7 +31,7 @@ _main:
 	subq	$8, %rsp
 	call	main
 	movl	%eax, %edi
-	call	_exit
+	call	exit
 
 _exit:
     movq    %rax,  %rbx

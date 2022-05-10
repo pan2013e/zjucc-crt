@@ -58,3 +58,7 @@ int read(int __fd, void* __buf, int __size) {
 int close(int __fd) {
     return syscall(SYS_close, __fd);
 }
+
+__off_t lseek(int __fd, __off_t __offset, int __whence) {
+    return syscall(SYS_lseek, __fd, __offset, __whence);
+}
