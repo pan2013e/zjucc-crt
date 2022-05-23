@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/stdio.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stdio_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stdio.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stdio_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _STDIO_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _STDIO_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">    4</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">void</span> <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>; <span class="comment">// opaque type</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">extern</span> <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* <a class="code" href="stdio_8h.html#aaca70138f0cb63ddb026921afc635179">stdin</a>;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">extern</span> <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* <a class="code" href="stdio_8h.html#a0c0ef221f95f64e8632451312fd18cc8">stdout</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">extern</span> <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* <a class="code" href="stdio_8h.html#a5ce35bd5ba5021fd3b2e951e8f497656">stderr</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="stdio_8h.html#aaca70138f0cb63ddb026921afc635179">   10</a></span>&#160;<span class="preprocessor">#define stdin stdin</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="stdio_8h.html#a0c0ef221f95f64e8632451312fd18cc8">   11</a></span>&#160;<span class="preprocessor">#define stdout stdout</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="stdio_8h.html#a5ce35bd5ba5021fd3b2e951e8f497656">   12</a></span>&#160;<span class="preprocessor">#define stderr stderr</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="stdio_8h.html#a59adc4c82490d23754cd39c2fb99b0da">   14</a></span>&#160;<span class="preprocessor">#define EOF (-1)</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="stdio_8h.html#a0d112bae8fd35be772185b6ec6bcbe64">   16</a></span>&#160;<span class="preprocessor">#define SEEK_SET    0   </span><span class="comment">/* Seek from beginning of file.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="stdio_8h.html#a4c8d0b76b470ba65a43ca46a88320f39">   17</a></span>&#160;<span class="preprocessor">#define SEEK_CUR    1   </span><span class="comment">/* Seek from current position.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="stdio_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8">   18</a></span>&#160;<span class="preprocessor">#define SEEK_END    2   </span><span class="comment">/* Seek from end of file.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#a830cccb61b69c3d966fdcc754fe508d6">puts</a>(<span class="keywordtype">char</span>* s);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="stdio_8h.html#a5dee04c912798047e379b0e5bb8c52de">gets</a>(<span class="keywordtype">char</span>* buf);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ac6890f64d868702085fc21b46b683f28">printf</a>(<span class="keywordtype">char</span>* fmt, ...);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ae5648dc958899bebd1fe370bd563b810">scanf</a>(<span class="keywordtype">char</span>* fmt, ...);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#a07036e93939040c563e862a6a31b65bc">putchar</a>(<span class="keywordtype">int</span> ch);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ac45fdeab51c3197c1e7c4ec7beabaca9">getchar</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keywordtype">void</span> <a class="code" href="stdio_8h.html#a01a54ddbbc6ab18e4853ba0427329aca">perror</a>(<span class="keywordtype">char</span>* s);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* <a class="code" href="stdio_8h.html#a0404a4227c24b65b97a2ebb073d4b0a6">fopen</a>(<span class="keywordtype">char</span>* path, <span class="keywordtype">char</span>* mode);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ad6f9925d3ee909f0a40bc9bc68cfa15a">fprintf</a>(<a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp, <span class="keywordtype">char</span>* fmt, ...);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ac6a3eb941f61f03a6b1eaaeaeb0656ad">fputs</a>(<span class="keywordtype">char</span>* s, <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#ae41fd070996a5bb338190cbd20c28361">fputc</a>(<span class="keywordtype">int</span> ch, <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#a5972ac73ba11086858f08a1ccd846333">fgetc</a>(<a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="keywordtype">char</span>* <a class="code" href="stdio_8h.html#a9914d940a4179659c71bbe1f646d7106">fgets</a>(<span class="keywordtype">char</span>* buf, <span class="keywordtype">int</span> n, <a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#a3abd78c220b4b49d1b088f0dfe40bf23">fclose</a>(<a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keywordtype">int</span> <a class="code" href="stdio_8h.html#a03681b8592bba6fe02941b9abc182808">fileno</a>(<a class="code" href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a>* fp);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _STDIO_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="astdio_8h_html_a07036e93939040c563e862a6a31b65bc"><div class="ttname"><a href="stdio_8h.html#a07036e93939040c563e862a6a31b65bc">putchar</a></div><div class="ttdeci">int putchar(int ch)</div></div>
+<div class="ttc" id="astdio_8h_html_a5dee04c912798047e379b0e5bb8c52de"><div class="ttname"><a href="stdio_8h.html#a5dee04c912798047e379b0e5bb8c52de">gets</a></div><div class="ttdeci">char * gets(char *buf)</div></div>
+<div class="ttc" id="astdio_8h_html_a3abd78c220b4b49d1b088f0dfe40bf23"><div class="ttname"><a href="stdio_8h.html#a3abd78c220b4b49d1b088f0dfe40bf23">fclose</a></div><div class="ttdeci">int fclose(FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_a9914d940a4179659c71bbe1f646d7106"><div class="ttname"><a href="stdio_8h.html#a9914d940a4179659c71bbe1f646d7106">fgets</a></div><div class="ttdeci">char * fgets(char *buf, int n, FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_ac6a3eb941f61f03a6b1eaaeaeb0656ad"><div class="ttname"><a href="stdio_8h.html#ac6a3eb941f61f03a6b1eaaeaeb0656ad">fputs</a></div><div class="ttdeci">int fputs(char *s, FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_a03681b8592bba6fe02941b9abc182808"><div class="ttname"><a href="stdio_8h.html#a03681b8592bba6fe02941b9abc182808">fileno</a></div><div class="ttdeci">int fileno(FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_ac45fdeab51c3197c1e7c4ec7beabaca9"><div class="ttname"><a href="stdio_8h.html#ac45fdeab51c3197c1e7c4ec7beabaca9">getchar</a></div><div class="ttdeci">int getchar()</div></div>
+<div class="ttc" id="astdio_8h_html_aaca70138f0cb63ddb026921afc635179"><div class="ttname"><a href="stdio_8h.html#aaca70138f0cb63ddb026921afc635179">stdin</a></div><div class="ttdeci">#define stdin</div><div class="ttdef"><b>Definition:</b> <a href="stdio_8h_source.html#l00010">stdio.h:10</a></div></div>
+<div class="ttc" id="astdio_8h_html_ad6f9925d3ee909f0a40bc9bc68cfa15a"><div class="ttname"><a href="stdio_8h.html#ad6f9925d3ee909f0a40bc9bc68cfa15a">fprintf</a></div><div class="ttdeci">int fprintf(FILE *fp, char *fmt,...)</div></div>
+<div class="ttc" id="astdio_8h_html_a830cccb61b69c3d966fdcc754fe508d6"><div class="ttname"><a href="stdio_8h.html#a830cccb61b69c3d966fdcc754fe508d6">puts</a></div><div class="ttdeci">int puts(char *s)</div></div>
+<div class="ttc" id="astdio_8h_html_a1bcda75666d51eabcbd6e14ec07da8f8"><div class="ttname"><a href="stdio_8h.html#a1bcda75666d51eabcbd6e14ec07da8f8">FILE</a></div><div class="ttdeci">void FILE</div><div class="ttdef"><b>Definition:</b> <a href="stdio_8h_source.html#l00004">stdio.h:4</a></div></div>
+<div class="ttc" id="astdio_8h_html_a0c0ef221f95f64e8632451312fd18cc8"><div class="ttname"><a href="stdio_8h.html#a0c0ef221f95f64e8632451312fd18cc8">stdout</a></div><div class="ttdeci">#define stdout</div><div class="ttdef"><b>Definition:</b> <a href="stdio_8h_source.html#l00011">stdio.h:11</a></div></div>
+<div class="ttc" id="astdio_8h_html_ae41fd070996a5bb338190cbd20c28361"><div class="ttname"><a href="stdio_8h.html#ae41fd070996a5bb338190cbd20c28361">fputc</a></div><div class="ttdeci">int fputc(int ch, FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_a01a54ddbbc6ab18e4853ba0427329aca"><div class="ttname"><a href="stdio_8h.html#a01a54ddbbc6ab18e4853ba0427329aca">perror</a></div><div class="ttdeci">void perror(char *s)</div></div>
+<div class="ttc" id="astdio_8h_html_a5972ac73ba11086858f08a1ccd846333"><div class="ttname"><a href="stdio_8h.html#a5972ac73ba11086858f08a1ccd846333">fgetc</a></div><div class="ttdeci">int fgetc(FILE *fp)</div></div>
+<div class="ttc" id="astdio_8h_html_ae5648dc958899bebd1fe370bd563b810"><div class="ttname"><a href="stdio_8h.html#ae5648dc958899bebd1fe370bd563b810">scanf</a></div><div class="ttdeci">int scanf(char *fmt,...)</div></div>
+<div class="ttc" id="astdio_8h_html_ac6890f64d868702085fc21b46b683f28"><div class="ttname"><a href="stdio_8h.html#ac6890f64d868702085fc21b46b683f28">printf</a></div><div class="ttdeci">int printf(char *fmt,...)</div></div>
+<div class="ttc" id="astdio_8h_html_a0404a4227c24b65b97a2ebb073d4b0a6"><div class="ttname"><a href="stdio_8h.html#a0404a4227c24b65b97a2ebb073d4b0a6">fopen</a></div><div class="ttdeci">FILE * fopen(char *path, char *mode)</div></div>
+<div class="ttc" id="astdio_8h_html_a5ce35bd5ba5021fd3b2e951e8f497656"><div class="ttname"><a href="stdio_8h.html#a5ce35bd5ba5021fd3b2e951e8f497656">stderr</a></div><div class="ttdeci">#define stderr</div><div class="ttdef"><b>Definition:</b> <a href="stdio_8h_source.html#l00012">stdio.h:12</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="stdio_8h.html">stdio.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

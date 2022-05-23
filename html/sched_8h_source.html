@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/sys/sched.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sched_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">sched.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="sched_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _SCHED_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _SCHED_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Cloning flags.  */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno"><a class="line" href="sched_8h.html#ae0d79ebfece4e0d1905e40f689a3986a">    5</a></span>&#160;<span class="preprocessor"># define CSIGNAL       0x000000ff </span><span class="comment">/* Signal mask to be sent at exit.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="sched_8h.html#ac07965af2ad895ca67fdc8352303fbb5">    6</a></span>&#160;<span class="preprocessor"># define CLONE_VM      0x00000100 </span><span class="comment">/* Set if VM shared between processes.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="sched_8h.html#abf70cffabfa4515feef97f66bae6a5c7">    7</a></span>&#160;<span class="preprocessor"># define CLONE_FS      0x00000200 </span><span class="comment">/* Set if fs info shared between processes.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="sched_8h.html#ab062e8c87b92d645f7f4698a36e5b57a">    8</a></span>&#160;<span class="preprocessor"># define CLONE_FILES   0x00000400 </span><span class="comment">/* Set if open files shared between processes.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="sched_8h.html#a36c57614f62361d9a91c75d2ef1bf854">    9</a></span>&#160;<span class="preprocessor"># define CLONE_SIGHAND 0x00000800 </span><span class="comment">/* Set if signal handlers shared.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="sched_8h.html#acc25c67d9c10a8e52067e7c53d15e5ee">   10</a></span>&#160;<span class="preprocessor"># define CLONE_PIDFD   0x00001000 </span><span class="comment">/* Set if a pidfd should be placed in parent.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="sched_8h.html#a3d840224e4d7734b628800b9906491fe">   11</a></span>&#160;<span class="preprocessor"># define CLONE_PTRACE  0x00002000 </span><span class="comment">/* Set if tracing continues on the child.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="sched_8h.html#ab197605ca12b5976dac64103a5f6cccc">   12</a></span>&#160;<span class="preprocessor"># define CLONE_VFORK   0x00004000 </span><span class="comment">/* Set if the parent wants the child to wake it up on mm_release.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="sched_8h.html#a93d70879b6c53ae3475b3241d09c4741">   13</a></span>&#160;<span class="preprocessor"># define CLONE_PARENT  0x00008000 </span><span class="comment">/* Set if we want to have the same parent as the cloner.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="sched_8h.html#a349a1461dd7321b43878ea9ecd5be8ee">   14</a></span>&#160;<span class="preprocessor"># define CLONE_THREAD  0x00010000 </span><span class="comment">/* Set to add to same thread group.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="sched_8h.html#aab02ccd05c3d9fa806d974e38a8debc4">   15</a></span>&#160;<span class="preprocessor"># define CLONE_NEWNS   0x00020000 </span><span class="comment">/* Set to create new namespace.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="sched_8h.html#adf7188a799214c0cc99c30dcc2594b37">   16</a></span>&#160;<span class="preprocessor"># define CLONE_SYSVSEM 0x00040000 </span><span class="comment">/* Set to shared SVID SEM_UNDO semantics.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="sched_8h.html#a977f0a84f5dd94d49fbbc0fa194e26a3">   17</a></span>&#160;<span class="preprocessor"># define CLONE_SETTLS  0x00080000 </span><span class="comment">/* Set TLS info.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="sched_8h.html#a1373b97ed9463892bebd97c564905043">   18</a></span>&#160;<span class="preprocessor"># define CLONE_PARENT_SETTID 0x00100000 </span><span class="comment">/* Store TID in userlevel buffer before MM copy.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="sched_8h.html#a79914877b533fca7fbdb319640b42add">   19</a></span>&#160;<span class="preprocessor"># define CLONE_CHILD_CLEARTID 0x00200000 </span><span class="comment">/* Register exit futex and memory location to clear.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="sched_8h.html#a4263cd6fbfe5ed33f52e09ef24c6de58">   20</a></span>&#160;<span class="preprocessor"># define CLONE_DETACHED 0x00400000 </span><span class="comment">/* Create clone detached.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="sched_8h.html#a29244834ccba5811ef328921a5e9a482">   21</a></span>&#160;<span class="preprocessor"># define CLONE_UNTRACED 0x00800000 </span><span class="comment">/* Set if the tracing process can&#39;t force CLONE_PTRACE on this clone.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="sched_8h.html#a816767a2cd31aaac3573d5bd6e32871c">   22</a></span>&#160;<span class="preprocessor"># define CLONE_CHILD_SETTID 0x01000000 </span><span class="comment">/* Store TID in userlevel buffer in the child.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="sched_8h.html#a9d5d88148a26086567c3731e2e5e110a">   23</a></span>&#160;<span class="preprocessor"># define CLONE_NEWCGROUP    0x02000000  </span><span class="comment">/* New cgroup namespace.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="sched_8h.html#afaf1addd4b1e90196d1876896c1a53c3">   24</a></span>&#160;<span class="preprocessor"># define CLONE_NEWUTS   0x04000000  </span><span class="comment">/* New utsname group.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="sched_8h.html#a1f702bf1b80ed7a8cef30e363a87e3e3">   25</a></span>&#160;<span class="preprocessor"># define CLONE_NEWIPC   0x08000000  </span><span class="comment">/* New ipcs.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="sched_8h.html#a5d697cae6f0156524a1bd7d77bcf8e87">   26</a></span>&#160;<span class="preprocessor"># define CLONE_NEWUSER  0x10000000  </span><span class="comment">/* New user namespace.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="sched_8h.html#a2fa6801173606dd3492ca9061d1c4ad4">   27</a></span>&#160;<span class="preprocessor"># define CLONE_NEWPID   0x20000000  </span><span class="comment">/* New pid namespace.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="sched_8h.html#a2ba1673aa7423b46a7bcfa8f68cd2bce">   28</a></span>&#160;<span class="preprocessor"># define CLONE_NEWNET   0x40000000  </span><span class="comment">/* New network namespace.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="sched_8h.html#a3e6aada28e7b8090ed425ff96e6ac191">   29</a></span>&#160;<span class="preprocessor"># define CLONE_IO   0x80000000  </span><span class="comment">/* Clone I/O context.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keywordtype">int</span> <a class="code" href="sched_8h.html#a5ae49a1ee5d1cf30a9f34fa95139e2c4">clone</a>(<span class="keywordtype">int</span> (*__fn) (<span class="keywordtype">void</span>* __arg), <span class="keywordtype">void</span>* __child_stack,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">int</span> __flags, <span class="keywordtype">void</span>* __arg, ...);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // _SCHED_H_</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="asched_8h_html_a5ae49a1ee5d1cf30a9f34fa95139e2c4"><div class="ttname"><a href="sched_8h.html#a5ae49a1ee5d1cf30a9f34fa95139e2c4">clone</a></div><div class="ttdeci">int clone(int(*__fn)(void *__arg), void *__child_stack, int __flags, void *__arg,...)</div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_317ea3797c15f4a1d9c156bc812661ca.html">sys</a></li><li class="navelem"><a class="el" href="sched_8h.html">sched.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

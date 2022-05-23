@@ -1,0 +1,138 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/sys/stat.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('stat_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">stat.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="stat_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _STAT_H_</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _STAT_H_</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="comment">/* Encoding of the file mode.  */</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="stat_8h.html#a9e8ff14db6f24746ab6700ff14a7ea58">    6</a></span>&#160;<span class="preprocessor">#define __S_IFMT    0170000 </span><span class="comment">/* These bits determine file type.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="comment">/* File types.  */</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="stat_8h.html#a437f0083418fce6f04bf23717df8209c">    9</a></span>&#160;<span class="preprocessor">#define __S_IFDIR   0040000 </span><span class="comment">/* Directory.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="stat_8h.html#af9bd6ccc2f7b825534a49432ed8da6b5">   10</a></span>&#160;<span class="preprocessor">#define __S_IFCHR   0020000 </span><span class="comment">/* Character device.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="stat_8h.html#aeeadea47ffebf06ef4d139fe17abaf13">   11</a></span>&#160;<span class="preprocessor">#define __S_IFBLK   0060000 </span><span class="comment">/* Block device.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="stat_8h.html#a2880c12836c3f7a74345e149ba1a24a4">   12</a></span>&#160;<span class="preprocessor">#define __S_IFREG   0100000 </span><span class="comment">/* Regular file.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="stat_8h.html#aaae53e8d8888a8952bb0f98f06fd1233">   13</a></span>&#160;<span class="preprocessor">#define __S_IFIFO   0010000 </span><span class="comment">/* FIFO.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="stat_8h.html#a924278480c3a4622c3ffed0b7019d394">   14</a></span>&#160;<span class="preprocessor">#define __S_IFLNK   0120000 </span><span class="comment">/* Symbolic link.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="stat_8h.html#a579ef025011de98afaad741d9a56c958">   15</a></span>&#160;<span class="preprocessor">#define __S_IFSOCK  0140000 </span><span class="comment">/* Socket.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="comment">/* POSIX.1b objects.  Note that these macros always evaluate to zero.  But</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">   they do it by enforcing the correct use of the macros.  */</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="stat_8h.html#afdd1ce98e0bbeb09c0ec1188f59b8d1c">   19</a></span>&#160;<span class="preprocessor">#define __S_TYPEISMQ(buf)  ((buf)-&gt;st_mode - (buf)-&gt;st_mode)</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="stat_8h.html#a010434ba0ef126ebd4d19dc08406022a">   20</a></span>&#160;<span class="preprocessor">#define __S_TYPEISSEM(buf) ((buf)-&gt;st_mode - (buf)-&gt;st_mode)</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="stat_8h.html#a36a1058a219d53dc331808574b6d09e0">   21</a></span>&#160;<span class="preprocessor">#define __S_TYPEISSHM(buf) ((buf)-&gt;st_mode - (buf)-&gt;st_mode)</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="comment">/* Protection bits.  */</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="stat_8h.html#ad7102ea82cea82388ce9e3b34089e855">   25</a></span>&#160;<span class="preprocessor">#define __S_ISUID   04000   </span><span class="comment">/* Set user ID on execution.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="stat_8h.html#a23d7d72bbf62842af2a8c365ffae883a">   26</a></span>&#160;<span class="preprocessor">#define __S_ISGID   02000   </span><span class="comment">/* Set group ID on execution.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="stat_8h.html#a6e04290f4a4b2a4a47f267a7f4c33f52">   27</a></span>&#160;<span class="preprocessor">#define __S_ISVTX   01000   </span><span class="comment">/* Save swapped text after use (sticky).  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="stat_8h.html#a17e739c2ac29addc91893482cdba7b0f">   28</a></span>&#160;<span class="preprocessor">#define __S_IREAD   0400    </span><span class="comment">/* Read by owner.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="stat_8h.html#ac2e5783ad7c19384ddc66ba0a30bba0a">   29</a></span>&#160;<span class="preprocessor">#define __S_IWRITE  0200    </span><span class="comment">/* Write by owner.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="stat_8h.html#a2901e38e3b39ff66d25a0d4623295146">   30</a></span>&#160;<span class="preprocessor">#define __S_IEXEC   0100    </span><span class="comment">/* Execute by owner.  */</span><span class="preprocessor"></span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">#ifdef __USE_ATFILE</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="preprocessor"># define UTIME_NOW  ((1l &lt;&lt; 30) - 1l)</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor"># define UTIME_OMIT ((1l &lt;&lt; 30) - 2l)</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif </span><span class="comment">/* _STAT_H_ */</span><span class="preprocessor"></span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_317ea3797c15f4a1d9c156bc812661ca.html">sys</a></li><li class="navelem"><a class="el" href="stat_8h.html">stat.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/unistd.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('unistd_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">unistd.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<div class="textblock"><code>#include &quot;<a class="el" href="types_8h_source.html">bits/types.h</a>&quot;</code><br />
+</div><div class="textblock"><div class="dynheader">
+unistd.h 的引用(Include)关系图:</div>
+<div class="dyncontent">
+<div class="center"><img src="unistd_8h__incl.png" border="0" usemap="#include_2unistd_8h" alt=""/></div>
+</div>
+</div>
+<p><a href="unistd_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:afcf80a6d91178952d107ad00b165752b"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#afcf80a6d91178952d107ad00b165752b">STDIN_FILENO</a>&#160;&#160;&#160;0</td></tr>
+<tr class="separator:afcf80a6d91178952d107ad00b165752b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd165ee6474b5b75bf075842fff13a04"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#abd165ee6474b5b75bf075842fff13a04">STDOUT_FILENO</a>&#160;&#160;&#160;1</td></tr>
+<tr class="separator:abd165ee6474b5b75bf075842fff13a04"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae2fe1725bb5e9823d089c46b9ed5266e"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ae2fe1725bb5e9823d089c46b9ed5266e">STDERR_FILENO</a>&#160;&#160;&#160;2</td></tr>
+<tr class="separator:ae2fe1725bb5e9823d089c46b9ed5266e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d112bae8fd35be772185b6ec6bcbe64"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a0d112bae8fd35be772185b6ec6bcbe64">SEEK_SET</a>&#160;&#160;&#160;0	/* Seek from beginning of file.  */</td></tr>
+<tr class="separator:a0d112bae8fd35be772185b6ec6bcbe64"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c8d0b76b470ba65a43ca46a88320f39"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a4c8d0b76b470ba65a43ca46a88320f39">SEEK_CUR</a>&#160;&#160;&#160;1	/* Seek from current position.  */</td></tr>
+<tr class="separator:a4c8d0b76b470ba65a43ca46a88320f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad2a2e6c114780c3071efd24f16c7f7d8"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ad2a2e6c114780c3071efd24f16c7f7d8">SEEK_END</a>&#160;&#160;&#160;2	/* Seek from end of file.  */</td></tr>
+<tr class="separator:ad2a2e6c114780c3071efd24f16c7f7d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:ad02d10731da187cb1b84368b6de445e8"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ad02d10731da187cb1b84368b6de445e8">write</a> (int __fd, void *__buf, int __size)</td></tr>
+<tr class="separator:ad02d10731da187cb1b84368b6de445e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaba9d21a3bb9edcc55990327db9da590"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#aaba9d21a3bb9edcc55990327db9da590">read</a> (int __fd, void *__buf, int __size)</td></tr>
+<tr class="separator:aaba9d21a3bb9edcc55990327db9da590"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a73834ef472e30f71aecba39e88809d1d"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a73834ef472e30f71aecba39e88809d1d">close</a> (int __fd)</td></tr>
+<tr class="separator:a73834ef472e30f71aecba39e88809d1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa3a80f0c682e09d788db0c2b4cc5ff7e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#aa3a80f0c682e09d788db0c2b4cc5ff7e">fork</a> ()</td></tr>
+<tr class="separator:aa3a80f0c682e09d788db0c2b4cc5ff7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ccdeb931b6cfcf884ca5ad73e0ba11c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a2ccdeb931b6cfcf884ca5ad73e0ba11c">getpid</a> ()</td></tr>
+<tr class="separator:a2ccdeb931b6cfcf884ca5ad73e0ba11c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7d99c4618975fd753197a2f412d3fd0"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ad7d99c4618975fd753197a2f412d3fd0">gettid</a> ()</td></tr>
+<tr class="separator:ad7d99c4618975fd753197a2f412d3fd0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a60504a7f17eb297bbde12b2f95918d9a"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a60504a7f17eb297bbde12b2f95918d9a">wait</a> (int *__wstatus)</td></tr>
+<tr class="separator:a60504a7f17eb297bbde12b2f95918d9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7cfe6a79363ef64129d42f5170327e8c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a7cfe6a79363ef64129d42f5170327e8c">waitpid</a> (int __pid, int *__wstatus, int __options)</td></tr>
+<tr class="separator:a7cfe6a79363ef64129d42f5170327e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81ab19eca9b65ededa6c2d35476b17c0"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a81ab19eca9b65ededa6c2d35476b17c0">getcwd</a> (char *__buf, int __size)</td></tr>
+<tr class="separator:a81ab19eca9b65ededa6c2d35476b17c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a25fc77e8c67271c6fbd7df528eeea2d3"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#a25fc77e8c67271c6fbd7df528eeea2d3">chdir</a> (char *__path)</td></tr>
+<tr class="separator:a25fc77e8c67271c6fbd7df528eeea2d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab63020219925b4168eb2d69402396cae"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ab63020219925b4168eb2d69402396cae">sleep</a> (int __seconds)</td></tr>
+<tr class="separator:ab63020219925b4168eb2d69402396cae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab381257c06a1789ac1c0bea715d59830"><td class="memItemLeft" align="right" valign="top"><a class="el" href="types_8h.html#a63ea3d651bab373d159e64948db1b585">__off_t</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="unistd_8h.html#ab381257c06a1789ac1c0bea715d59830">lseek</a> (int __fd, <a class="el" href="types_8h.html#a63ea3d651bab373d159e64948db1b585">__off_t</a> __offset, int __whence)</td></tr>
+<tr class="separator:ab381257c06a1789ac1c0bea715d59830"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a4c8d0b76b470ba65a43ca46a88320f39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c8d0b76b470ba65a43ca46a88320f39">&#9670;&nbsp;</a></span>SEEK_CUR</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEEK_CUR&#160;&#160;&#160;1	/* Seek from current position.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ad2a2e6c114780c3071efd24f16c7f7d8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad2a2e6c114780c3071efd24f16c7f7d8">&#9670;&nbsp;</a></span>SEEK_END</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEEK_END&#160;&#160;&#160;2	/* Seek from end of file.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a0d112bae8fd35be772185b6ec6bcbe64"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0d112bae8fd35be772185b6ec6bcbe64">&#9670;&nbsp;</a></span>SEEK_SET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define SEEK_SET&#160;&#160;&#160;0	/* Seek from beginning of file.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae2fe1725bb5e9823d089c46b9ed5266e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae2fe1725bb5e9823d089c46b9ed5266e">&#9670;&nbsp;</a></span>STDERR_FILENO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STDERR_FILENO&#160;&#160;&#160;2</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afcf80a6d91178952d107ad00b165752b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afcf80a6d91178952d107ad00b165752b">&#9670;&nbsp;</a></span>STDIN_FILENO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STDIN_FILENO&#160;&#160;&#160;0</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00006">6</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abd165ee6474b5b75bf075842fff13a04"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abd165ee6474b5b75bf075842fff13a04">&#9670;&nbsp;</a></span>STDOUT_FILENO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define STDOUT_FILENO&#160;&#160;&#160;1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="unistd_8h_source.html">unistd.h</a> 第 <a class="el" href="unistd_8h_source.html#l00007">7</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a25fc77e8c67271c6fbd7df528eeea2d3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a25fc77e8c67271c6fbd7df528eeea2d3">&#9670;&nbsp;</a></span>chdir()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int chdir </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>__path</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a73834ef472e30f71aecba39e88809d1d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a73834ef472e30f71aecba39e88809d1d">&#9670;&nbsp;</a></span>close()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int close </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__fd</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa3a80f0c682e09d788db0c2b4cc5ff7e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa3a80f0c682e09d788db0c2b4cc5ff7e">&#9670;&nbsp;</a></span>fork()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int fork </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a81ab19eca9b65ededa6c2d35476b17c0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a81ab19eca9b65ededa6c2d35476b17c0">&#9670;&nbsp;</a></span>getcwd()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char* getcwd </td>
+          <td>(</td>
+          <td class="paramtype">char *&#160;</td>
+          <td class="paramname"><em>__buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2ccdeb931b6cfcf884ca5ad73e0ba11c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ccdeb931b6cfcf884ca5ad73e0ba11c">&#9670;&nbsp;</a></span>getpid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int getpid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad7d99c4618975fd753197a2f412d3fd0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7d99c4618975fd753197a2f412d3fd0">&#9670;&nbsp;</a></span>gettid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int gettid </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab381257c06a1789ac1c0bea715d59830"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab381257c06a1789ac1c0bea715d59830">&#9670;&nbsp;</a></span>lseek()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="types_8h.html#a63ea3d651bab373d159e64948db1b585">__off_t</a> lseek </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="types_8h.html#a63ea3d651bab373d159e64948db1b585">__off_t</a>&#160;</td>
+          <td class="paramname"><em>__offset</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__whence</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aaba9d21a3bb9edcc55990327db9da590"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aaba9d21a3bb9edcc55990327db9da590">&#9670;&nbsp;</a></span>read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int read </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>__buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab63020219925b4168eb2d69402396cae"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab63020219925b4168eb2d69402396cae">&#9670;&nbsp;</a></span>sleep()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int sleep </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__seconds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a60504a7f17eb297bbde12b2f95918d9a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a60504a7f17eb297bbde12b2f95918d9a">&#9670;&nbsp;</a></span>wait()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int wait </td>
+          <td>(</td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>__wstatus</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7cfe6a79363ef64129d42f5170327e8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7cfe6a79363ef64129d42f5170327e8c">&#9670;&nbsp;</a></span>waitpid()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int waitpid </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__pid</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int *&#160;</td>
+          <td class="paramname"><em>__wstatus</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__options</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad02d10731da187cb1b84368b6de445e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad02d10731da187cb1b84368b6de445e8">&#9670;&nbsp;</a></span>write()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int write </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__fd</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>__buf</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__size</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="unistd_8h.html">unistd.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

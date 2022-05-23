@@ -1,0 +1,130 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/pthread.h 源文件</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('pthread_8h_source.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="headertitle">
+<div class="title">pthread.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pthread_8h.html">浏览该文件的文档.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef _PTHREAD_H</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define _PTHREAD_H</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
+<div class="line"><a name="l00004"></a><span class="lineno"><a class="line" href="pthread_8h.html#a5ab9b757735efaa398db829ff81762a4">    4</a></span>&#160;<span class="keyword">typedef</span> <span class="keywordtype">unsigned</span> <span class="keywordtype">long</span> <a class="code" href="pthread_8h.html#a5ab9b757735efaa398db829ff81762a4">pthread_t</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#if __x86_64__</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#  define __SIZEOF_PTHREAD_MUTEX_T 40</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#  define __SIZEOF_PTHREAD_ATTR_T 56</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#  define __SIZEOF_PTHREAD_RWLOCK_T 56</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#  define __SIZEOF_PTHREAD_BARRIER_T 32</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#error &quot;Unsupported architecture&quot;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="pthread_8h.html#a1e95466b6a3443bb230e17cc073e0bd0">   15</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">union </span><a class="code" href="unionpthread__attr__t.html">pthread_attr_t</a> <a class="code" href="unionpthread__attr__t.html">pthread_attr_t</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="unionpthread__attr__t.html">   16</a></span>&#160;<span class="keyword">union </span><a class="code" href="unionpthread__attr__t.html">pthread_attr_t</a> {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="unionpthread__attr__t.html#a8104b3fa017332aacf8178a9b1736849">   17</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="unionpthread__attr__t.html#a8104b3fa017332aacf8178a9b1736849">__size</a>[__SIZEOF_PTHREAD_ATTR_T];</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="unionpthread__attr__t.html#ab623775aa011a8a217c875f535605097">   18</a></span>&#160;    <span class="keywordtype">long</span> <span class="keywordtype">int</span> <a class="code" href="unionpthread__attr__t.html#ab623775aa011a8a217c875f535605097">__align</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keywordtype">int</span> <a class="code" href="pthread_8h.html#ae5d18438d4d20c8a2e42cd2500578d79">pthread_create</a>(<a class="code" href="pthread_8h.html#a5ab9b757735efaa398db829ff81762a4">pthread_t</a>* thread, <span class="keyword">const</span> <a class="code" href="unionpthread__attr__t.html">pthread_attr_t</a>* attr,</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span>* (*start_routine)(<span class="keywordtype">void</span>*), <span class="keywordtype">void</span>* arg);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif // _PTHREAD_H</span></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<div class="ttc" id="apthread_8h_html_ae5d18438d4d20c8a2e42cd2500578d79"><div class="ttname"><a href="pthread_8h.html#ae5d18438d4d20c8a2e42cd2500578d79">pthread_create</a></div><div class="ttdeci">int pthread_create(pthread_t *thread, const pthread_attr_t *attr, void *(*start_routine)(void *), void *arg)</div></div>
+<div class="ttc" id="aunionpthread__attr__t_html_ab623775aa011a8a217c875f535605097"><div class="ttname"><a href="unionpthread__attr__t.html#ab623775aa011a8a217c875f535605097">pthread_attr_t::__align</a></div><div class="ttdeci">long int __align</div><div class="ttdef"><b>Definition:</b> <a href="pthread_8h_source.html#l00018">pthread.h:18</a></div></div>
+<div class="ttc" id="aunionpthread__attr__t_html"><div class="ttname"><a href="unionpthread__attr__t.html">pthread_attr_t</a></div><div class="ttdef"><b>Definition:</b> <a href="pthread_8h_source.html#l00016">pthread.h:16</a></div></div>
+<div class="ttc" id="apthread_8h_html_a5ab9b757735efaa398db829ff81762a4"><div class="ttname"><a href="pthread_8h.html#a5ab9b757735efaa398db829ff81762a4">pthread_t</a></div><div class="ttdeci">unsigned long pthread_t</div><div class="ttdef"><b>Definition:</b> <a href="pthread_8h_source.html#l00004">pthread.h:4</a></div></div>
+<div class="ttc" id="aunionpthread__attr__t_html_a8104b3fa017332aacf8178a9b1736849"><div class="ttname"><a href="unionpthread__attr__t.html#a8104b3fa017332aacf8178a9b1736849">pthread_attr_t::__size</a></div><div class="ttdeci">char __size[__SIZEOF_PTHREAD_ATTR_T]</div><div class="ttdef"><b>Definition:</b> <a href="pthread_8h_source.html#l00017">pthread.h:17</a></div></div>
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="pthread_8h.html">pthread.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>

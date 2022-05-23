@@ -1,0 +1,613 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>C Runtime Library: include/sys/sched.h 文件参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">C Runtime Library
+   &#160;<span id="projectnumber">2022-5-23</span>
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+      <div id="nav-sync" class="sync"></div>
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(document).ready(function(){initNavTree('sched_8h.html',''); initResizable(); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div class="header">
+  <div class="summary">
+<a href="#define-members">宏定义</a> &#124;
+<a href="#func-members">函数</a>  </div>
+  <div class="headertitle">
+<div class="title">sched.h 文件参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+
+<p><a href="sched_8h_source.html">浏览源代码.</a></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="define-members"></a>
+宏定义</h2></td></tr>
+<tr class="memitem:ae0d79ebfece4e0d1905e40f689a3986a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#ae0d79ebfece4e0d1905e40f689a3986a">CSIGNAL</a>&#160;&#160;&#160;0x000000ff /* Signal mask to be sent at exit.  */</td></tr>
+<tr class="separator:ae0d79ebfece4e0d1905e40f689a3986a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac07965af2ad895ca67fdc8352303fbb5"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#ac07965af2ad895ca67fdc8352303fbb5">CLONE_VM</a>&#160;&#160;&#160;0x00000100 /* Set if VM shared between processes.  */</td></tr>
+<tr class="separator:ac07965af2ad895ca67fdc8352303fbb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf70cffabfa4515feef97f66bae6a5c7"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#abf70cffabfa4515feef97f66bae6a5c7">CLONE_FS</a>&#160;&#160;&#160;0x00000200 /* Set if fs info shared between processes.  */</td></tr>
+<tr class="separator:abf70cffabfa4515feef97f66bae6a5c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab062e8c87b92d645f7f4698a36e5b57a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#ab062e8c87b92d645f7f4698a36e5b57a">CLONE_FILES</a>&#160;&#160;&#160;0x00000400 /* Set if <a class="el" href="sys_2fcntl_8h.html#a51264dd0c46eb90ec044497a448a4a78">open</a> files shared between processes.  */</td></tr>
+<tr class="separator:ab062e8c87b92d645f7f4698a36e5b57a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a36c57614f62361d9a91c75d2ef1bf854"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a36c57614f62361d9a91c75d2ef1bf854">CLONE_SIGHAND</a>&#160;&#160;&#160;0x00000800 /* Set if signal handlers shared.  */</td></tr>
+<tr class="separator:a36c57614f62361d9a91c75d2ef1bf854"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc25c67d9c10a8e52067e7c53d15e5ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#acc25c67d9c10a8e52067e7c53d15e5ee">CLONE_PIDFD</a>&#160;&#160;&#160;0x00001000 /* Set if a pidfd should be placed in parent.  */</td></tr>
+<tr class="separator:acc25c67d9c10a8e52067e7c53d15e5ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d840224e4d7734b628800b9906491fe"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a3d840224e4d7734b628800b9906491fe">CLONE_PTRACE</a>&#160;&#160;&#160;0x00002000 /* Set if tracing continues on the child.  */</td></tr>
+<tr class="separator:a3d840224e4d7734b628800b9906491fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab197605ca12b5976dac64103a5f6cccc"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#ab197605ca12b5976dac64103a5f6cccc">CLONE_VFORK</a>&#160;&#160;&#160;0x00004000 /* Set if the parent wants the child to wake it up on mm_release.  */</td></tr>
+<tr class="separator:ab197605ca12b5976dac64103a5f6cccc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a93d70879b6c53ae3475b3241d09c4741"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a93d70879b6c53ae3475b3241d09c4741">CLONE_PARENT</a>&#160;&#160;&#160;0x00008000 /* Set if we want to have the same parent as the cloner.  */</td></tr>
+<tr class="separator:a93d70879b6c53ae3475b3241d09c4741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a349a1461dd7321b43878ea9ecd5be8ee"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a349a1461dd7321b43878ea9ecd5be8ee">CLONE_THREAD</a>&#160;&#160;&#160;0x00010000 /* Set to add to same thread group.  */</td></tr>
+<tr class="separator:a349a1461dd7321b43878ea9ecd5be8ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aab02ccd05c3d9fa806d974e38a8debc4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#aab02ccd05c3d9fa806d974e38a8debc4">CLONE_NEWNS</a>&#160;&#160;&#160;0x00020000 /* Set to create new namespace.  */</td></tr>
+<tr class="separator:aab02ccd05c3d9fa806d974e38a8debc4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf7188a799214c0cc99c30dcc2594b37"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#adf7188a799214c0cc99c30dcc2594b37">CLONE_SYSVSEM</a>&#160;&#160;&#160;0x00040000 /* Set to shared SVID SEM_UNDO semantics.  */</td></tr>
+<tr class="separator:adf7188a799214c0cc99c30dcc2594b37"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a977f0a84f5dd94d49fbbc0fa194e26a3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a977f0a84f5dd94d49fbbc0fa194e26a3">CLONE_SETTLS</a>&#160;&#160;&#160;0x00080000 /* Set TLS info.  */</td></tr>
+<tr class="separator:a977f0a84f5dd94d49fbbc0fa194e26a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1373b97ed9463892bebd97c564905043"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a1373b97ed9463892bebd97c564905043">CLONE_PARENT_SETTID</a>&#160;&#160;&#160;0x00100000 /* Store TID in userlevel buffer before MM copy.  */</td></tr>
+<tr class="separator:a1373b97ed9463892bebd97c564905043"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a79914877b533fca7fbdb319640b42add"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a79914877b533fca7fbdb319640b42add">CLONE_CHILD_CLEARTID</a>&#160;&#160;&#160;0x00200000 /* Register <a class="el" href="stdlib_8h.html#a037e1211798125c945a26bfbfdf26b8f">exit</a> futex and memory location to clear.  */</td></tr>
+<tr class="separator:a79914877b533fca7fbdb319640b42add"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4263cd6fbfe5ed33f52e09ef24c6de58"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a4263cd6fbfe5ed33f52e09ef24c6de58">CLONE_DETACHED</a>&#160;&#160;&#160;0x00400000 /* Create <a class="el" href="sched_8h.html#a5ae49a1ee5d1cf30a9f34fa95139e2c4">clone</a> detached.  */</td></tr>
+<tr class="separator:a4263cd6fbfe5ed33f52e09ef24c6de58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a29244834ccba5811ef328921a5e9a482"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a29244834ccba5811ef328921a5e9a482">CLONE_UNTRACED</a>&#160;&#160;&#160;0x00800000 /* Set if the tracing process can't force <a class="el" href="sched_8h.html#a3d840224e4d7734b628800b9906491fe">CLONE_PTRACE</a> on this clone.  */</td></tr>
+<tr class="separator:a29244834ccba5811ef328921a5e9a482"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a816767a2cd31aaac3573d5bd6e32871c"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a816767a2cd31aaac3573d5bd6e32871c">CLONE_CHILD_SETTID</a>&#160;&#160;&#160;0x01000000 /* Store TID in userlevel buffer in the child.  */</td></tr>
+<tr class="separator:a816767a2cd31aaac3573d5bd6e32871c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5d88148a26086567c3731e2e5e110a"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a9d5d88148a26086567c3731e2e5e110a">CLONE_NEWCGROUP</a>&#160;&#160;&#160;0x02000000	/* New cgroup namespace.  */</td></tr>
+<tr class="separator:a9d5d88148a26086567c3731e2e5e110a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afaf1addd4b1e90196d1876896c1a53c3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#afaf1addd4b1e90196d1876896c1a53c3">CLONE_NEWUTS</a>&#160;&#160;&#160;0x04000000	/* New utsname group.  */</td></tr>
+<tr class="separator:afaf1addd4b1e90196d1876896c1a53c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1f702bf1b80ed7a8cef30e363a87e3e3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a1f702bf1b80ed7a8cef30e363a87e3e3">CLONE_NEWIPC</a>&#160;&#160;&#160;0x08000000	/* New ipcs.  */</td></tr>
+<tr class="separator:a1f702bf1b80ed7a8cef30e363a87e3e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5d697cae6f0156524a1bd7d77bcf8e87"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a5d697cae6f0156524a1bd7d77bcf8e87">CLONE_NEWUSER</a>&#160;&#160;&#160;0x10000000	/* New user namespace.  */</td></tr>
+<tr class="separator:a5d697cae6f0156524a1bd7d77bcf8e87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2fa6801173606dd3492ca9061d1c4ad4"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a2fa6801173606dd3492ca9061d1c4ad4">CLONE_NEWPID</a>&#160;&#160;&#160;0x20000000	/* New pid namespace.  */</td></tr>
+<tr class="separator:a2fa6801173606dd3492ca9061d1c4ad4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ba1673aa7423b46a7bcfa8f68cd2bce"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a2ba1673aa7423b46a7bcfa8f68cd2bce">CLONE_NEWNET</a>&#160;&#160;&#160;0x40000000	/* New network namespace.  */</td></tr>
+<tr class="separator:a2ba1673aa7423b46a7bcfa8f68cd2bce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e6aada28e7b8090ed425ff96e6ac191"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a3e6aada28e7b8090ed425ff96e6ac191">CLONE_IO</a>&#160;&#160;&#160;0x80000000	/* Clone I/O context.  */</td></tr>
+<tr class="separator:a3e6aada28e7b8090ed425ff96e6ac191"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
+函数</h2></td></tr>
+<tr class="memitem:a5ae49a1ee5d1cf30a9f34fa95139e2c4"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="sched_8h.html#a5ae49a1ee5d1cf30a9f34fa95139e2c4">clone</a> (int(*__fn)(void *__arg), void *__child_stack, int __flags, void *__arg,...)</td></tr>
+<tr class="separator:a5ae49a1ee5d1cf30a9f34fa95139e2c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<h2 class="groupheader">宏定义说明</h2>
+<a id="a79914877b533fca7fbdb319640b42add"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a79914877b533fca7fbdb319640b42add">&#9670;&nbsp;</a></span>CLONE_CHILD_CLEARTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_CHILD_CLEARTID&#160;&#160;&#160;0x00200000 /* Register <a class="el" href="stdlib_8h.html#a037e1211798125c945a26bfbfdf26b8f">exit</a> futex and memory location to clear.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00019">19</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a816767a2cd31aaac3573d5bd6e32871c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a816767a2cd31aaac3573d5bd6e32871c">&#9670;&nbsp;</a></span>CLONE_CHILD_SETTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_CHILD_SETTID&#160;&#160;&#160;0x01000000 /* Store TID in userlevel buffer in the child.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00022">22</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a4263cd6fbfe5ed33f52e09ef24c6de58"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4263cd6fbfe5ed33f52e09ef24c6de58">&#9670;&nbsp;</a></span>CLONE_DETACHED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_DETACHED&#160;&#160;&#160;0x00400000 /* Create <a class="el" href="sched_8h.html#a5ae49a1ee5d1cf30a9f34fa95139e2c4">clone</a> detached.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00020">20</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab062e8c87b92d645f7f4698a36e5b57a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab062e8c87b92d645f7f4698a36e5b57a">&#9670;&nbsp;</a></span>CLONE_FILES</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_FILES&#160;&#160;&#160;0x00000400 /* Set if <a class="el" href="sys_2fcntl_8h.html#a51264dd0c46eb90ec044497a448a4a78">open</a> files shared between processes.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00008">8</a> 行定义.</p>
+
+</div>
+</div>
+<a id="abf70cffabfa4515feef97f66bae6a5c7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf70cffabfa4515feef97f66bae6a5c7">&#9670;&nbsp;</a></span>CLONE_FS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_FS&#160;&#160;&#160;0x00000200 /* Set if fs info shared between processes.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00007">7</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3e6aada28e7b8090ed425ff96e6ac191"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e6aada28e7b8090ed425ff96e6ac191">&#9670;&nbsp;</a></span>CLONE_IO</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_IO&#160;&#160;&#160;0x80000000	/* Clone I/O context.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00029">29</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a9d5d88148a26086567c3731e2e5e110a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5d88148a26086567c3731e2e5e110a">&#9670;&nbsp;</a></span>CLONE_NEWCGROUP</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWCGROUP&#160;&#160;&#160;0x02000000	/* New cgroup namespace.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00023">23</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1f702bf1b80ed7a8cef30e363a87e3e3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1f702bf1b80ed7a8cef30e363a87e3e3">&#9670;&nbsp;</a></span>CLONE_NEWIPC</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWIPC&#160;&#160;&#160;0x08000000	/* New ipcs.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00025">25</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2ba1673aa7423b46a7bcfa8f68cd2bce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ba1673aa7423b46a7bcfa8f68cd2bce">&#9670;&nbsp;</a></span>CLONE_NEWNET</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWNET&#160;&#160;&#160;0x40000000	/* New network namespace.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00028">28</a> 行定义.</p>
+
+</div>
+</div>
+<a id="aab02ccd05c3d9fa806d974e38a8debc4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aab02ccd05c3d9fa806d974e38a8debc4">&#9670;&nbsp;</a></span>CLONE_NEWNS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWNS&#160;&#160;&#160;0x00020000 /* Set to create new namespace.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00015">15</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a2fa6801173606dd3492ca9061d1c4ad4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2fa6801173606dd3492ca9061d1c4ad4">&#9670;&nbsp;</a></span>CLONE_NEWPID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWPID&#160;&#160;&#160;0x20000000	/* New pid namespace.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00027">27</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a5d697cae6f0156524a1bd7d77bcf8e87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5d697cae6f0156524a1bd7d77bcf8e87">&#9670;&nbsp;</a></span>CLONE_NEWUSER</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWUSER&#160;&#160;&#160;0x10000000	/* New user namespace.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00026">26</a> 行定义.</p>
+
+</div>
+</div>
+<a id="afaf1addd4b1e90196d1876896c1a53c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afaf1addd4b1e90196d1876896c1a53c3">&#9670;&nbsp;</a></span>CLONE_NEWUTS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_NEWUTS&#160;&#160;&#160;0x04000000	/* New utsname group.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00024">24</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a93d70879b6c53ae3475b3241d09c4741"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a93d70879b6c53ae3475b3241d09c4741">&#9670;&nbsp;</a></span>CLONE_PARENT</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_PARENT&#160;&#160;&#160;0x00008000 /* Set if we want to have the same parent as the cloner.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00013">13</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a1373b97ed9463892bebd97c564905043"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1373b97ed9463892bebd97c564905043">&#9670;&nbsp;</a></span>CLONE_PARENT_SETTID</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_PARENT_SETTID&#160;&#160;&#160;0x00100000 /* Store TID in userlevel buffer before MM copy.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00018">18</a> 行定义.</p>
+
+</div>
+</div>
+<a id="acc25c67d9c10a8e52067e7c53d15e5ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#acc25c67d9c10a8e52067e7c53d15e5ee">&#9670;&nbsp;</a></span>CLONE_PIDFD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_PIDFD&#160;&#160;&#160;0x00001000 /* Set if a pidfd should be placed in parent.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00010">10</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a3d840224e4d7734b628800b9906491fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3d840224e4d7734b628800b9906491fe">&#9670;&nbsp;</a></span>CLONE_PTRACE</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_PTRACE&#160;&#160;&#160;0x00002000 /* Set if tracing continues on the child.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00011">11</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a977f0a84f5dd94d49fbbc0fa194e26a3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a977f0a84f5dd94d49fbbc0fa194e26a3">&#9670;&nbsp;</a></span>CLONE_SETTLS</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_SETTLS&#160;&#160;&#160;0x00080000 /* Set TLS info.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00017">17</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a36c57614f62361d9a91c75d2ef1bf854"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a36c57614f62361d9a91c75d2ef1bf854">&#9670;&nbsp;</a></span>CLONE_SIGHAND</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_SIGHAND&#160;&#160;&#160;0x00000800 /* Set if signal handlers shared.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00009">9</a> 行定义.</p>
+
+</div>
+</div>
+<a id="adf7188a799214c0cc99c30dcc2594b37"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf7188a799214c0cc99c30dcc2594b37">&#9670;&nbsp;</a></span>CLONE_SYSVSEM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_SYSVSEM&#160;&#160;&#160;0x00040000 /* Set to shared SVID SEM_UNDO semantics.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00016">16</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a349a1461dd7321b43878ea9ecd5be8ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a349a1461dd7321b43878ea9ecd5be8ee">&#9670;&nbsp;</a></span>CLONE_THREAD</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_THREAD&#160;&#160;&#160;0x00010000 /* Set to add to same thread group.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00014">14</a> 行定义.</p>
+
+</div>
+</div>
+<a id="a29244834ccba5811ef328921a5e9a482"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a29244834ccba5811ef328921a5e9a482">&#9670;&nbsp;</a></span>CLONE_UNTRACED</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_UNTRACED&#160;&#160;&#160;0x00800000 /* Set if the tracing process can't force <a class="el" href="sched_8h.html#a3d840224e4d7734b628800b9906491fe">CLONE_PTRACE</a> on this clone.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00021">21</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ab197605ca12b5976dac64103a5f6cccc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab197605ca12b5976dac64103a5f6cccc">&#9670;&nbsp;</a></span>CLONE_VFORK</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_VFORK&#160;&#160;&#160;0x00004000 /* Set if the parent wants the child to wake it up on mm_release.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00012">12</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ac07965af2ad895ca67fdc8352303fbb5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac07965af2ad895ca67fdc8352303fbb5">&#9670;&nbsp;</a></span>CLONE_VM</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CLONE_VM&#160;&#160;&#160;0x00000100 /* Set if VM shared between processes.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00006">6</a> 行定义.</p>
+
+</div>
+</div>
+<a id="ae0d79ebfece4e0d1905e40f689a3986a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae0d79ebfece4e0d1905e40f689a3986a">&#9670;&nbsp;</a></span>CSIGNAL</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">#define CSIGNAL&#160;&#160;&#160;0x000000ff /* Signal mask to be sent at exit.  */</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p class="definition">在文件 <a class="el" href="sched_8h_source.html">sched.h</a> 第 <a class="el" href="sched_8h_source.html#l00005">5</a> 行定义.</p>
+
+</div>
+</div>
+<h2 class="groupheader">函数说明</h2>
+<a id="a5ae49a1ee5d1cf30a9f34fa95139e2c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5ae49a1ee5d1cf30a9f34fa95139e2c4">&#9670;&nbsp;</a></span>clone()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int clone </td>
+          <td>(</td>
+          <td class="paramtype">int(*)(void *__arg)&#160;</td>
+          <td class="paramname"><em>__fn</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>__child_stack</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>__flags</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">void *&#160;</td>
+          <td class="paramname"><em>__arg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>...</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_317ea3797c15f4a1d9c156bc812661ca.html">sys</a></li><li class="navelem"><a class="el" href="sched_8h.html">sched.h</a></li>
+    <li class="footer">制作者
+    <a href="http://www.doxygen.org/index.html">
+    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+  </ul>
+</div>
+</body>
+</html>
