@@ -34,6 +34,6 @@ void __longjmp(struct __jmp_buf_tag __env[1], int __val) __attribute__((__noretu
 
 #else
 #error "Unsupported architecture"
-#endif
+#endif // __x86_64__
 
 #endif // _SETJMP_H
