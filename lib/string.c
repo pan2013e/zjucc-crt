@@ -186,3 +186,10 @@ char* strerror(int errnum) {
     memcpy(buf, __to_copy, strlen(__to_copy));
     return buf;
 }
+
+char* strdup(char* __s) {
+    char* __ret = (char*)malloc(sizeof(char) * (strlen(__s) + 1));
+    memset(__ret, 0, strlen(__s) + 1);
+    memcpy(__ret, __s, strlen(__s));
+    return __ret;
+}
