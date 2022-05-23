@@ -20,6 +20,7 @@ int close(int __fd);
 
 int fork();
 int getpid();
+int gettid();
 
 int wait(int* __wstatus);
 int waitpid(int __pid, int* __wstatus, int __options);

@@ -15,6 +15,10 @@ int getpid() {
     return syscall(SYS_getpid);
 }
 
+int gettid() {
+    return syscall(SYS_gettid);
+}
+
 char* getcwd(char* __buf, int __size) {
     int ret = syscall(SYS_getcwd, __buf, __size);
     if (ret < 0) return (void*)0;
