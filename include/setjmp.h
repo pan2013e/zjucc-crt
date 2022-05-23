@@ -1,8 +1,6 @@
 #ifndef _SETJMP_H
 #define _SETJMP_H
 
-#define _SIGSET_NWORDS (1024 / (8 * sizeof (unsigned long int)))
-
 #if defined __x86_64__ && !defined __ILP32__
 /* Offsets:
  * RBX = 0
@@ -32,10 +30,10 @@ int __setjmp(struct __jmp_buf_tag __env[1]);
 void __longjmp(struct __jmp_buf_tag __env[1], int __val) __attribute__((__noreturn__));
 
 #define setjmp(env)	__setjmp(env)
-#define longjmp(env, val)	__longjmp(env, val)
+#define longjmp(env, val)	__longjmp((env), (val) ? (val) : 1)
 
 #else
-#error "Unimplemented"
+#error "Unsupported architecture"
 #endif
 
 #endif // _SETJMP_H

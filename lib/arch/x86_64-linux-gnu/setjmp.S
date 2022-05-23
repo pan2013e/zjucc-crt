@@ -29,7 +29,7 @@ __longjmp:
     mov 0x20(%rdi), %r14 # restore R14
     mov 0x28(%rdi), %r15 # restore R15
     mov 0x30(%rdi), %rsp # restore RSP
-    mov %esi, %eax       # return __val
+    mov %esi, %eax       # `setjmp' returns `__val'
     mov 0x38(%rdi), %rdx # get PC
     jmpq *%rdx           # jump to PC
 
