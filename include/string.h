@@ -6,6 +6,7 @@ void memcpy(void* __dst, void* __src, long __size);
 
 int strlen(char* __s);
 char* strchr(char* __s, int c);
+char* strdup(char* __s);
 int strcmp(char* __s1, char* __s2);
 
 char* strerror(int errnum);
