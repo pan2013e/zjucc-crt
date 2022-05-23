@@ -1,0 +1,29 @@
+name: Build Doxygen docs
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build_and_publish:
+    name: Build and Publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+        with:
+          ref: main
+      - name: Install Doxygen
+        run: |
+          sudo apt install doxygen
+      - name: Build
+        run: |
+          doxygen Doxyfile
+      - name: Publish
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./docs
+          publish_branch: gh-pages
+          full_commit_message: ${{ github.event.head_commit.message }}
